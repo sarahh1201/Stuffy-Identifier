@@ -1,0 +1,30 @@
+{
+  "001": {
+    "name": "Sniffy",
+    "acquired": null,
+    "size": "Medium",
+    "colors": ["Brown", "White", "Gray"],
+    "species": "Unknown"
+  },
+  "002": {
+    "name": "Dan",
+    "acquired": null,
+    "size": "Small",
+    "colors": ["Green"],
+    "species": "Dinosaur"
+  },
+  "003": {
+    "name": "Drake",
+    "acquired": null,
+    "size": "Small",
+    "colors": ["Green"],
+    "species": "Dragon"
+  },
+  "004": {
+    "name": "Cora",
+    "acquired": "2025-05",
+    "size": "Small",
+    "colors": ["Pink", "Black"],
+    "species": "Cow"
+  }
+}
