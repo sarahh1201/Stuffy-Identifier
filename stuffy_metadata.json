@@ -1,4 +1,11 @@
 {
+  "000": {
+    "name": "Test",
+    "acquired": null,
+    "size": "Small",
+    "colors": ["Brown"],
+    "species": "Fox"
+  },
   "001": {
     "name": "Sniffy",
     "acquired": null,
