@@ -1,5 +1,5 @@
 # Tools Used
-- [madesende.ai](https://www.makesense.ai) to create the model
+- [makesense.ai](https://www.makesense.ai) to create the model
 - OpenCV for image processing 
 - Ultralytrics for model training 
 
