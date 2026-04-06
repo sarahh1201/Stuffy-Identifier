@@ -1,11 +1,11 @@
 path: /content/Stuffy-Identifier/dataset
 
-train: images/train
-val: images/val
+train: /Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/dataset/images/train
+val: /Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/dataset/images/val
 
 names:
-  0: Test
-  1: Sniffy
-  2: Dan
-  3: Drake
-  4: Cora
+  - Test
+  - Sniffy
+  - Dan
+  - Drake
+  - Cora

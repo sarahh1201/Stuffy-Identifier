@@ -1,33 +1,33 @@
 {
-  "000": {
+  "0": {
     "name": "Test",
     "acquired": null,
     "size": "Small",
     "colors": ["Brown"],
     "species": "Fox"
   },
-  "001": {
+  "1": {
     "name": "Sniffy",
     "acquired": null,
     "size": "Medium",
     "colors": ["Brown", "White", "Gray"],
     "species": "Unknown"
   },
-  "002": {
+  "2": {
     "name": "Dan",
     "acquired": null,
     "size": "Small",
     "colors": ["Green"],
     "species": "Dinosaur"
   },
-  "003": {
+  "3": {
     "name": "Drake",
     "acquired": null,
     "size": "Small",
     "colors": ["Green"],
     "species": "Dragon"
   },
-  "004": {
+  "4": {
     "name": "Cora",
     "acquired": "2025-05",
     "size": "Small",
