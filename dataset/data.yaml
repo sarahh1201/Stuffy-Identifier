@@ -1,0 +1,11 @@
+path: /content/Stuffy-Identifier/dataset
+
+train: images/train
+val: images/val
+
+names:
+  0: Test
+  1: Sniffy
+  2: Dan
+  3: Drake
+  4: Cora
