@@ -6,7 +6,7 @@ from PIL import Image
 ## Test 1: Load model and perform inference on an image
 
 # Load a trained model
-model = YOLO("/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/runs/detect/train4/weights/best.pt")
+model = YOLO("/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/runs/detect/train/weights/best.pt")
 
 # Perform inference on an image
 results = model.predict(

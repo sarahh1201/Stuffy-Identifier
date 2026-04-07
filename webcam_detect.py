@@ -3,7 +3,7 @@ import json
 from ultralytics import YOLO
 
 # Load model
-model = YOLO("/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/runs/detect/train4/weights/best.pt")
+model = YOLO("/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/runs/detect/train/weights/best.pt")
 
 # Load metadata
 with open("stuffy_metadata.json", "r") as f:
