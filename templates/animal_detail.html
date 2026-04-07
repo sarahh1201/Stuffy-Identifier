@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ animal.name }} Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <a href="/" class="back-btn">← Back to Catalogue</a>
+
+    <div class="cardAnimalDetailed">
+        <h1>{{ animal.name }}</h1>
+        <p><strong>Date Acquired:</strong> {{ animal.acquired or "Unknown" }}</p>
+        <p><strong>Species:</strong> {{ animal.species }}</p>
+        <p><strong>Colours:</strong> {{ animal.colours | join(", ") }}</p>
+        <p><strong>Size:</strong> {{ animal.size }}</p>
+        <p><strong>Detectable:</strong> {{ "Yes" if animal.detectable == true else "No" }}</p>
+    </div>
+
+</body>
+</html>

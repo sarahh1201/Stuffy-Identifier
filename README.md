@@ -4,7 +4,11 @@
 - Ultralytrics for model training 
 
 Activate Environment:
-`source venv/bin/activate`
+```source venv/bin/activate```
 
 Deactivate:
-`deactivate`
+```deactivate```
+
+Start Flask App:
+```python app.py```
+

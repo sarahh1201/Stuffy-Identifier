@@ -1,8 +1,8 @@
 import cv2
 import os
 
-video_path = "/Users/sarahhill/Downloads/IMG_6400.MOV"
-output_folder = "/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/RawFrames"
+video_path = ""
+output_folder = "RawFrames"
 
 os.makedirs(output_folder, exist_ok=True)
 

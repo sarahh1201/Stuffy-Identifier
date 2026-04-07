@@ -3,10 +3,10 @@ import json
 from ultralytics import YOLO
 
 # Load model
-model = YOLO("/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/runs/detect/train/weights/best.pt")
+model = YOLO("runs/detect/train/weights/best.pt")
 
 # Load metadata
-with open("stuffy_metadata.json", "r") as f:
+with open("dataset/stuffy_metadata.json", "r") as f:
     metadata = json.load(f)
 
 # Open webcam
@@ -47,7 +47,7 @@ while True:
                 print("----- DETECTED -----")
                 print(f"Name: {info['name']}")
                 print(f"Species: {info['species']}")
-                print("Colors: " + ", ".join(info['colors']))
+                print("Colours: " + ", ".join(info['colours']))
                 print(f"Confidence: {conf:.2f}")
                 print("--------------------")
 

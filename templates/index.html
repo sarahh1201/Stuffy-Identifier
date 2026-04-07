@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stuffed Animal Catalogue</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    
+</head>
+<body>
+
+    <h1>🐻 Stuffed Animal Catalogue</h1>
+
+    <div class="button-container">
+        <a href="/detect">
+            <button>Open Camera Detection</button>
+        </a>
+        
+        <a href="/add">
+            <button>Add New Stuffed Animal</button>
+        </a>
+    </div>
+
+    <div class="container" id="cards"></div>
+
+
+
+    <script>
+    const stuffedAnimals = {{ metadata | tojson }};
+
+    function randomColor() {
+        const colors = [
+            "#FAEDCB", "#C9E4DE", "#C6DEF1",
+            "#DBCDF0", "#F2C6DE", "#F7D9C4"
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+    
+    const container = document.getElementById("cards");
+
+    Object.keys(stuffedAnimals).forEach(key => {
+        const item = stuffedAnimals[key];
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.style.backgroundColor = randomColor();
+
+        card.innerHTML = `
+            <div>
+                <h3>${item.name}</h3>
+                <p>${item.species}</p>
+                <p>Colors: ${item.colours.join(", ")}</p>
+            </div>
+        `;
+
+        card.onclick = () => {
+            window.location.href = `/animal/${key}`;
+        };
+
+        container.appendChild(card);
+    });
+    </script>
+
+</body>
+</html>

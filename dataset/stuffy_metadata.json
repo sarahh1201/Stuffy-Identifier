@@ -1,0 +1,75 @@
+{
+  "0": {
+    "name": "Test",
+    "acquired": null,
+    "size": "Small",
+    "colours": [
+      "Brown"
+    ],
+    "species": "Fox",
+    "detectable": true
+  },
+  "1": {
+    "name": "Sniffy",
+    "acquired": null,
+    "size": "Medium",
+    "colours": [
+      "Brown",
+      "White",
+      "Gray"
+    ],
+    "species": "Bear Mix",
+    "detectable": true
+  },
+  "2": {
+    "name": "Dan",
+    "acquired": null,
+    "size": "Small",
+    "colours": [
+      "Green"
+    ],
+    "species": "Dinosaur",
+    "detectable": true
+  },
+  "3": {
+    "name": "Drake",
+    "acquired": null,
+    "size": "Small",
+    "colours": [
+      "Green"
+    ],
+    "species": "Dragon",
+    "detectable": true
+  },
+  "4": {
+    "name": "Cora",
+    "acquired": "2025-05",
+    "size": "Small",
+    "colours": [
+      "Pink",
+      "Black"
+    ],
+    "species": "Cow",
+    "detectable": true
+  },
+  "5": {
+    "name": "Cherry",
+    "acquired": "2026-02",
+    "size": "Small",
+    "colours": [
+      "Pink"
+    ],
+    "species": "Cow",
+    "detectable": false
+  },
+  "6": {
+    "name": "Mimi",
+    "acquired": "2005-10",
+    "size": "Small",
+    "colours": [
+      "Brown"
+    ],
+    "species": "Monkey",
+    "detectable": false
+  }
+}

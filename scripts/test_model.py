@@ -6,19 +6,19 @@ from PIL import Image
 ## Test 1: Load model and perform inference on an image
 
 # Load a trained model
-model = YOLO("/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/runs/detect/train/weights/best.pt")
+model = YOLO("runs/detect/train/weights/best.pt")
 
 # Perform inference on an image
 results = model.predict(
-    source="/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/dataset/images/val/test1.jpg",
+    source="dataset/images/val/test1.jpg",
     conf=0.1,
     save=True
 )
 
 ## Test 2: Visualize bounding boxes from label file
 # Paths
-image_path = "/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/dataset/images/train/test14.jpg"
-label_path = "/Users/sarahhill/Documents/Workspaces/Stuffy-Identifier/dataset/labels/train/test14.txt"
+image_path = "dataset/images/train/test14.jpg"
+label_path = "dataset/labels/train/test14.txt"
 
 # Load image
 img = Image.open(image_path)

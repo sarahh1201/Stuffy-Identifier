@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Stuffed Animal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>📷 Add New Stuffed Animal</h1>
+
+    <br><br>
+
+    <form method="POST" action="/add">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="species">Species:</label><br>
+        <input type="text" id="species" name="species" required><br><br>
+
+        <label for="colours">Colours (comma-separated):</label><br>
+        <input type="text" id="colours" name="colours"><br><br>
+
+        <label for="acquired">Date Acquired:</label><br>
+        <input type="month" id="acquired" name="acquired" placeholder="YYYY-MM"><br><br>
+
+        <label for="size">Size:</label><br>
+        <input type="text" id="size" name="size"><br><br>
+
+        <button type="submit">Add to Catalogue</button>
+
+    <a href="/">
+        <button>Back to Catalogue</button>
+    </a>
+
+</body>
+</html>
