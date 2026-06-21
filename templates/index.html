@@ -1,64 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Stuffed Animal Catalogue</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% extends "base.html" %}
 
-    
-</head>
-<body>
+{% block title %}Stuffy Catalogue{% endblock %}
 
-    <h1>🐻 Stuffed Animal Catalogue</h1>
+{% block content %}
+<section class="hero">
+    <h1 class="hero-title">Your Stuffy Collection</h1>
+    <p class="hero-subtitle">Tap a friend to see their profile, or open the camera to identify them live.</p>
+</section>
 
-    <div class="button-container">
-        <a href="/detect">
-            <button>Open Camera Detection</button>
-        </a>
-        
-        <a href="/add">
-            <button>Add New Stuffed Animal</button>
-        </a>
-    </div>
+<div class="action-row">
+    <a href="/detect" class="btn btn-primary">📷 Open Camera Detection</a>
+    <a href="/add" class="btn btn-secondary">➕ Add New Stuffy</a>
+</div>
 
-    <div class="container" id="cards"></div>
-
-
-
-    <script>
-    const stuffedAnimals = {{ metadata | tojson }};
-
-    function randomColor() {
-        const colors = [
-            "#FAEDCB", "#C9E4DE", "#C6DEF1",
-            "#DBCDF0", "#F2C6DE", "#F7D9C4"
-        ];
-        return colors[Math.floor(Math.random() * colors.length)];
-    }
-    
-    const container = document.getElementById("cards");
-
-    Object.keys(stuffedAnimals).forEach(key => {
-        const item = stuffedAnimals[key];
-
-        const card = document.createElement("div");
-        card.className = "card";
-        card.style.backgroundColor = randomColor();
-
-        card.innerHTML = `
-            <div>
-                <h3>${item.name}</h3>
-                <p>${item.species}</p>
-                <p>Colors: ${item.colours.join(", ")}</p>
-            </div>
-        `;
-
-        card.onclick = () => {
-            window.location.href = `/animal/${key}`;
-        };
-
-        container.appendChild(card);
-    });
-    </script>
-
-</body>
-</html>
+<div class="card-grid">
+    {% for key, item in metadata.items() %}
+    <article
+        class="animal-card"
+        style="--accent: {{ card_color(loop.index0) }};"
+        onclick="window.location.href='/animal/{{ key }}'"
+    >
+        <div class="card-emoji">{{ species_emoji(item.species) }}</div>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.species }}</p>
+        <p>{{ item.colours | join(", ") }}</p>
+        {% if item.detectable %}
+        <span class="badge badge-detectable">Detectable</span>
+        {% else %}
+        <span class="badge badge-not-detectable">Catalogue only</span>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

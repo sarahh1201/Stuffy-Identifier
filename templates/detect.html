@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>📷 Webcam Detection</h1>
+{% block title %}Webcam Detection{% endblock %}
 
-    <img src="{{ url_for('video') }}" width="800">
+{% block content %}
+<section class="hero">
+    <h1 class="hero-title">Who's That Stuffy?</h1>
+    <p class="hero-subtitle">Hold a friend up to the camera and watch the model say hello.</p>
+</section>
 
-    <br><br>
+<div class="detect-layout">
+    <div class="video-frame">
+        <span class="video-badge">● Live</span>
+        <img src="{{ url_for('video') }}" alt="Live webcam detection feed">
+    </div>
 
-    <a href="/">
-        <button>Back to Catalogue</button>
-    </a>
+    <aside class="panel detect-sidebar">
+        <h2>Detected Friends</h2>
+        <p>The model looks for Sniffy, Dan, Drake, Cora, and Test.</p>
+        <div id="detection-list" class="detection-list">
+            <div class="empty-state">Waiting for a stuffy to appear...</div>
+        </div>
+    </aside>
+</div>
 
-</body>
-</html>
+<div class="action-row">
+    <a href="/" class="btn btn-secondary">← Back to Catalogue</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='detect.js') }}"></script>
+{% endblock %}

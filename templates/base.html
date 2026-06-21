@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Stuffy Identifier{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="top-bar">
+            <a href="/" class="brand">
+                <span class="brand-icon">🧸</span>
+                <span class="brand-text">Stuffy Identifier</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link {% if active_page == 'catalogue' %}active{% endif %}">Catalogue</a>
+                <a href="/detect" class="nav-link {% if active_page == 'detect' %}active{% endif %}">Detect</a>
+                <a href="/add" class="nav-link {% if active_page == 'add' %}active{% endif %}">Add New</a>
+            </nav>
+        </header>
+
+        <main class="page-content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

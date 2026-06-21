@@ -1,36 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add New Stuffed Animal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>📷 Add New Stuffed Animal</h1>
+{% block title %}Add New Stuffy{% endblock %}
 
-    <br><br>
+{% block content %}
+<section class="hero">
+    <h1 class="hero-title">Add a New Friend</h1>
+    <p class="hero-subtitle">New stuffies start in the catalogue. Train the model later to make them detectable.</p>
+</section>
 
-    <form method="POST" action="/add">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+<div class="panel panel-centered">
+    <form method="POST" action="/add" class="form-grid">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Cherry" required>
+        </div>
 
-        <label for="species">Species:</label><br>
-        <input type="text" id="species" name="species" required><br><br>
+        <div>
+            <label for="species">Species</label>
+            <input type="text" id="species" name="species" placeholder="Cow" required>
+        </div>
 
-        <label for="colours">Colours (comma-separated):</label><br>
-        <input type="text" id="colours" name="colours"><br><br>
+        <div>
+            <label for="colours">Colours</label>
+            <input type="text" id="colours" name="colours" placeholder="Pink, White">
+        </div>
 
-        <label for="acquired">Date Acquired:</label><br>
-        <input type="month" id="acquired" name="acquired" placeholder="YYYY-MM"><br><br>
+        <div>
+            <label for="acquired">Date Acquired</label>
+            <input type="month" id="acquired" name="acquired">
+        </div>
 
-        <label for="size">Size:</label><br>
-        <input type="text" id="size" name="size"><br><br>
+        <div>
+            <label for="size">Size</label>
+            <select id="size" name="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
 
-        <button type="submit">Add to Catalogue</button>
-
-    <a href="/">
-        <button>Back to Catalogue</button>
-    </a>
-
-</body>
-</html>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save to Catalogue</button>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

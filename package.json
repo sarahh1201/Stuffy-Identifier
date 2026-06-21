@@ -1,0 +1,14 @@
+{
+  "name": "stuffy-identifier",
+  "version": "1.0.0",
+  "description": "Identify and catalogue stuffed animals with YOLO detection",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "electron": "electron .",
+    "flask": "venv/bin/python app.py"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1"
+  }
+}
