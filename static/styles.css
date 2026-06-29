@@ -141,7 +141,7 @@ h1, h2, h3, .brand-text, .hero-title {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--pink) 0%, var(--lavender) 100%);
+    background: var(--pink);
     color: var(--text);
     box-shadow: 0 8px 20px rgba(232, 137, 173, 0.35);
 }

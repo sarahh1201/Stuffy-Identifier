@@ -71,5 +71,15 @@
     ],
     "species": "Monkey",
     "detectable": false
+  },
+  "7": {
+    "name": "Kendrick",
+    "acquired": "2025-10",
+    "size": "Small",
+    "colours": [
+      "White"
+    ],
+    "species": "Polar Bear",
+    "detectable": false
   }
 }
